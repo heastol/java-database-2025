@@ -40,4 +40,34 @@ Python GUI - Oracle연동 프로그램
     <img src = '../image/db006.png' width = "600">
 
 
-    ### Oracle연동 GUI개발 시작
+### Oracle연동 GUI개발 시작
+- 오라클 Python연동 DB(스키마) 
+    '''sql
+    CREATE SEQUENCE SEQ_STUDENT
+	INCREMENT BY 1		-- 숫자를 1씩 증가
+	START WITH 1;		-- 1부터 숫자가 증가됨
+    '''
+
+- Student 테이블 생성, 더미데이터 추가
+    '''sql
+    -- madang로그인
+    -- 조회
+    SELECT * FROM Students;
+
+    -- 더미데이터 삽입
+    INSERT INTO Student (std_id, std_name, std_mobile, std_regyear)
+    VALUES (seq_student.nextval, '홍길동', '010-9999-8888', 1997);
+    INSERT INTO Student (std_id, std_name, std_mobile, std_regyear)
+    VALUES (seq_student.nextval, '홍길동', '010-9999-8877', 2000);
+
+    COMMIT;
+    '''
+- Python에서 오라클 연동 테스트
+    - 오라클 모듈
+        - Oracledb - Oracle 최신버전에 매칭
+        - **cs_Oracle** - 구버전까지 잘 됨
+    - 콘솔에서 '> pip install cx_Oracle'
+    - Microsoft c++ Build Tools 필요
+- QtDesigner로 화면 구성
+- PyQt로 Oracle 연동 CRUD 구현
+

@@ -275,9 +275,9 @@
         END;
         '''
 
-## 7일차
+## 7, 8일차
 - Oracle연동 Python GUI 프로그램 개발
-    - [오라클연동](./)
+    - [토이프로젝트](./toyproject/README.md)
 ...
 
 
